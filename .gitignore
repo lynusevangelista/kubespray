@@ -29,6 +29,7 @@ inventory/*
 !inventory/local
 !inventory/sample
 !inventory/dev1
+!inventory/homelab
 inventory/*/artifacts/
 
 # Byte-compiled / optimized / DLL files
