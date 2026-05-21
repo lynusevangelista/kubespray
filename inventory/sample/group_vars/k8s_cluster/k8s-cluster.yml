@@ -366,8 +366,28 @@ kubeadm_patches: []
 #        example.com/test: "true"
 #      labels:
 #        example.com/prod_level: "{{ prod_level }}"
-# - ...
+# - ...kus
 # Patches are applied in the order they are specified.
 
 # Set to true to remove the role binding to anonymous users created by kubeadm
 remove_anonymous_access: false
+
+#Customized by hagenoakuma
+
+loadbalancer_apiserver:
+  address: 192.168.20.53
+  port: 6443
+
+apiserver_loadbalancer_domain_name: "lb-apiserver.kubernetes.internal"
+
+# loadbalancer_apiserver_localhost: true
+# loadbalancer_apiserver_is_external: false
+# loadbalancer_apiserver_type: haproxy
+
+# haproxy_loadbalancer_enabled: true
+
+
+
+# supplementary_addresses_in_ssl_keys:
+#   - 192.168.20.53
+#   - lb-apiserver.kubernetes.internal

@@ -17,16 +17,21 @@ bin_dir: /usr/local/bin
 #   port: 1234
 
 ## Internal loadbalancers for apiservers
-# loadbalancer_apiserver_localhost: true
+#loadbalancer_apiserver_localhost: false
 # valid options are "nginx" or "haproxy"
-# loadbalancer_apiserver_type: nginx  # valid values "nginx" or "haproxy"
+#loadbalancer_apiserver_type: haproxy  # valid values "nginx" or "haproxy"
+# haproxy_loadbalancer_enabled: true #hagenoakuma
+# keepalived_enabled: true #hagenoakuma
+
+# keepalived_virtual_ip: 192.168.20.50 #hagenoakuma
+# keepalived_interface: eth0 #hagenoakuma
 
 ## Local loadbalancer should use this port
 ## And must be set port 6443
-loadbalancer_apiserver_port: 6443
+#loadbalancer_apiserver_port: 6443
 
 ## If loadbalancer_apiserver_healthcheck_port variable defined, enables proxy liveness check for nginx.
-loadbalancer_apiserver_healthcheck_port: 8081
+#loadbalancer_apiserver_healthcheck_port: 8081
 
 ### OTHER OPTIONAL VARIABLES
 
